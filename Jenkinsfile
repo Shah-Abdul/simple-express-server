@@ -17,12 +17,16 @@ pipeline {
                 sh 'npm test'
             }
         }
-        stage('Deploy') {
-          environment {
-                PORT = 5001
-            }
+        stage('Deploy to Stage') {
             steps {
-                echo 'Deploy to local environment.'
+                echo 'Triggering Deploy to Stage environment...'
+                sh "curl '${env.RENDER_STAGE_DEPLOY_HOOK_URL}'"
+            }
+        }
+        stage('Deploy to Production') {
+            steps {
+                echo 'Triggering Deploy to Prod environment...'
+                sh "curl '${env.RENDER_STAGE_DEPLOY_HOOK_URL}'"
             }
         }
     }
