@@ -23,7 +23,6 @@ pipeline {
             }
             steps {
                 echo 'Deploy to local environment...'
-                // sh 'npm start'
             }
         }
     }
