@@ -7,7 +7,7 @@
     "test": "jest",
     "local": "PORT=5000 node app.js",
     "start": "node target/app.js",
-    "build": "mkdir target/ && cp app.js target/"
+    "build": "rm -rf target/ && mkdir target/ && cp app.js target/"
   },
   "keywords": [],
   "author": "",
