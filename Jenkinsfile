@@ -22,8 +22,8 @@ pipeline {
                 PORT = 5001
             }
             steps {
-                echo 'Deploying to local environment...'
-                sh 'npm start'
+                echo 'Deploy to local environment...'
+                // sh 'npm start'
             }
         }
     }
