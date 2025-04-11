@@ -22,7 +22,7 @@ pipeline {
                 PORT = 5001
             }
             steps {
-                echo 'Deploy to local environment...'
+                echo 'Deploy to local environment.'
             }
         }
     }
