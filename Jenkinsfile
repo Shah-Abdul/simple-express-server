@@ -18,6 +18,9 @@ pipeline {
             }
         }
         stage('Deploy') {
+          environment {
+                PORT = 5001
+            }
             steps {
                 echo 'Deploying to local environment...'
                 sh 'npm start'
